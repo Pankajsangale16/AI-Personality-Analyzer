@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - AI Personality Prediction System{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <h1>🧠 AI Personality Prediction System</h1>
+    <p>Discover your personality traits based on your social media posts using advanced AI and BERT technology</p>
+</div>
+
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <div class="form-container">
+            <h3 class="text-center mb-4">Analyze Your Personality</h3>
+            
+            {% if error %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endif %}
+            
+            <form method="post" action="{% url 'predict_personality' %}" id="predictionForm">
+                {% csrf_token %}
+                
+                <!-- Text Input Section -->
+                <div class="mb-4">
+                    <label for="text_input" class="form-label">
+                        <strong>📝 Enter Your Text</strong>
+                    </label>
+                    <textarea 
+                        class="form-control" 
+                        id="text_input" 
+                        name="text_input" 
+                        rows="6" 
+                        placeholder="Write about yourself, your thoughts, experiences, or paste your social media posts here... The more text you provide, the more accurate the prediction will be."
+                        required
+                    ></textarea>
+                    <div class="form-text">Minimum 50 characters recommended for better accuracy</div>
+                </div>
+                
+                <!-- OR Divider -->
+                <div class="text-center my-4">
+                    <span class="badge bg-secondary">OR</span>
+                </div>
+                
+                <!-- Twitter Input Section -->
+                <div class="mb-4">
+                    <label for="twitter_handle" class="form-label">
+                        <strong>🐦 Twitter Handle (Optional)</strong>
+                    </label>
+                    <div class="input-group">
+                        <span class="input-group-text">@</span>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="twitter_handle" 
+                            name="twitter_handle" 
+                            placeholder="username"
+                        >
+                    </div>
+                    <div class="form-text">We'll analyze your recent tweets to predict your personality</div>
+                </div>
+                
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <span class="submit-text">🔮 Predict My Personality</span>
+                        <span class="loading-spinner" style="display: none;">
+                            <span class="spinner-border spinner-border-sm" role="status"></span>
+                            Analyzing...
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Features Section -->
+        <div class="row mt-5">
+            <div class="col-md-4 text-center mb-4">
+                <div class="feature-icon">🤖</div>
+                <h5>AI-Powered Analysis</h5>
+                <p>Uses advanced BERT technology to understand text context and meaning</p>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="feature-icon">📊</div>
+                <h5>Big Five Traits</h5>
+                <p>Analyzes Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism</p>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="feature-icon">📈</div>
+                <h5>Visual Reports</h5>
+                <p>Get detailed personality reports with interactive charts and descriptions</p>
+            </div>
+        </div>
+        
+        <!-- How It Works -->
+        <div class="mt-5">
+            <h4 class="text-center mb-4">How It Works</h4>
+            <div class="row">
+                <div class="col-md-3 text-center mb-3">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                        1
+                    </div>
+                    <h6 class="mt-2">Input Text</h6>
+                    <small>Provide your text or Twitter handle</small>
+                </div>
+                <div class="col-md-3 text-center mb-3">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                        2
+                    </div>
+                    <h6 class="mt-2">BERT Processing</h6>
+                    <small>AI analyzes language patterns</small>
+                </div>
+                <div class="col-md-3 text-center mb-3">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                        3
+                    </div>
+                    <h6 class="mt-2">Personality Prediction</h6>
+                    <small>Calculates Big Five trait scores</small>
+                </div>
+                <div class="col-md-3 text-center mb-3">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                        4
+                    </div>
+                    <h6 class="mt-2">Detailed Report</h6>
+                    <small>Get insights and visualizations</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('predictionForm').addEventListener('submit', function(e) {
+    const submitBtn = e.target.querySelector('button[type="submit"]');
+    const submitText = submitBtn.querySelector('.submit-text');
+    const loadingSpinner = submitBtn.querySelector('.loading-spinner');
+    
+    submitText.style.display = 'none';
+    loadingSpinner.style.display = 'inline-block';
+    submitBtn.disabled = true;
+});
+
+// Character counter
+const textInput = document.getElementById('text_input');
+if (textInput) {
+    textInput.addEventListener('input', function() {
+        const charCount = this.value.length;
+        const formText = this.parentElement.querySelector('.form-text');
+        if (charCount < 50) {
+            formText.style.color = '#dc3545';
+            formText.textContent = `${charCount}/50 characters (minimum recommended)`;
+        } else {
+            formText.style.color = '#28a745';
+            formText.textContent = `${charCount} characters ✓`;
+        }
+    });
+}
+</script>
+{% endblock %}

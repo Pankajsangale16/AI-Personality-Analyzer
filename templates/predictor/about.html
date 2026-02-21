@@ -1,0 +1,229 @@
+{% extends 'base.html' %}
+
+{% block title %}About - AI Personality Prediction System{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <h1>🔬 About the Project</h1>
+    <p>Understanding personality through the power of AI and language analysis</p>
+</div>
+
+<!-- Project Overview -->
+<div class="row mb-5">
+    <div class="col-12">
+        <div class="bg-light p-4 rounded">
+            <h3 class="mb-3">🎯 Project Overview</h3>
+            <p>The AI-Based Personality Prediction System is an innovative web application that analyzes text from social media posts or user input to predict personality traits based on the Big Five model (OCEAN). Using advanced Natural Language Processing and machine learning techniques, this system provides insights into personality characteristics with remarkable accuracy.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Big Five Model -->
+<div class="row mb-5">
+    <div class="col-12">
+        <h3 class="text-center mb-4">🧠 The Big Five Personality Model (OCEAN)</h3>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="trait-card">
+                    <h5>🎨 Openness to Experience</h5>
+                    <p>Creativity, curiosity, imagination, and willingness to try new things. High scorers are imaginative and open-minded, while low scorers are practical and conventional.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="trait-card">
+                    <h5>📋 Conscientiousness</h5>
+                    <p>Organization, discipline, responsibility, and goal-oriented behavior. High scorers are reliable and self-controlled, while low scorers are more flexible and spontaneous.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="trait-card">
+                    <h5>🌟 Extraversion</h5>
+                    <p>Sociability, assertiveness, emotional expression, and tendency to seek stimulation. High scorers are outgoing and energetic, while low scorers are reserved and thoughtful.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="trait-card">
+                    <h5>🤝 Agreeableness</h5>
+                    <p>Cooperation, trust, compassion, and consideration for others. High scorers are cooperative and helpful, while low scorers are more competitive and critical.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="trait-card">
+                    <h5>😰 Neuroticism</h5>
+                    <p>Emotional stability, anxiety, moodiness, and stress response. High scorers are sensitive and emotionally responsive, while low scorers are calm and secure.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Technology Stack -->
+<div class="row mb-5">
+    <div class="col-12">
+        <h3 class="text-center mb-4">🛠️ Technology Stack</h3>
+        <div class="row">
+            <div class="col-md-4 text-center mb-4">
+                <div class="feature-icon">🐍</div>
+                <h5>Backend</h5>
+                <div class="tech-badges">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Django</span>
+                    <span class="tech-badge">Scikit-learn</span>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="feature-icon">🤖</div>
+                <h5>AI & ML</h5>
+                <div class="tech-badges">
+                    <span class="tech-badge">BERT</span>
+                    <span class="tech-badge">Transformers</span>
+                    <span class="tech-badge">PyTorch</span>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="feature-icon">🎨</div>
+                <h5>Frontend</h5>
+                <div class="tech-badges">
+                    <span class="tech-badge">HTML5</span>
+                    <span class="tech-badge">CSS3</span>
+                    <span class="tech-badge">Bootstrap</span>
+                    <span class="tech-badge">Chart.js</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- How It Works -->
+<div class="row mb-5">
+    <div class="col-12">
+        <h3 class="text-center mb-4">⚙️ How It Works</h3>
+        <div class="row">
+            <div class="col-md-3 text-center mb-3">
+                <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                    1
+                </div>
+                <h5>Text Input</h5>
+                <p>Users provide text through manual input or Twitter handle</p>
+            </div>
+            <div class="col-md-3 text-center mb-3">
+                <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                    2
+                </div>
+                <h5>Text Preprocessing</h5>
+                <p>Cleaning, tokenization, and removal of noise</p>
+            </div>
+            <div class="col-md-3 text-center mb-3">
+                <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                    3
+                </div>
+                <h5>BERT Embedding</h5>
+                <p>Converting text to numerical representations</p>
+            </div>
+            <div class="col-md-3 text-center mb-3">
+                <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                    4
+                </div>
+                <h5>Personality Prediction</h5>
+                <p>ML models predict Big Five trait scores</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Architecture -->
+<div class="row mb-5">
+    <div class="col-12">
+        <h3 class="text-center mb-4">🏗️ System Architecture</h3>
+        <div class="bg-light p-4 rounded">
+            <div class="text-center">
+                <div class="mb-3">
+                    <strong>User Interface</strong> (Django Templates)
+                </div>
+                <div class="mb-3">
+                    ↓
+                </div>
+                <div class="mb-3">
+                    <strong>Django Backend</strong> (Views, Models, URLs)
+                </div>
+                <div class="mb-3">
+                    ↓
+                </div>
+                <div class="mb-3">
+                    <strong>ML Pipeline</strong> (BERT + Personality Models)
+                </div>
+                <div class="mb-3">
+                    ↓
+                </div>
+                <div class="mb-3">
+                    <strong>Data Processing</strong> (Text Cleaning, Embedding)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Ethical Considerations -->
+<div class="row mb-5">
+    <div class="col-12">
+        <div class="alert alert-warning">
+            <h4 class="alert-heading">⚠️ Ethical Considerations</h4>
+            <p>This personality prediction system is designed for educational and research purposes only. The predictions provided are probabilistic and should not be used for:</p>
+            <ul>
+                <li>Clinical diagnosis or mental health assessment</li>
+                <li>Employment decisions or hiring processes</li>
+                <li>Legal or official evaluations</li>
+                <li>Any form of discrimination</li>
+            </ul>
+            <hr>
+            <p class="mb-0"><strong>Disclaimer:</strong> Personality is complex and multifaceted. This tool provides insights based on language patterns but cannot capture the full complexity of human personality. Always consult qualified professionals for psychological assessments.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Future Scope -->
+<div class="row mb-5">
+    <div class="col-12">
+        <h3 class="text-center mb-4">🚀 Future Enhancements</h3>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="trait-card">
+                    <h5>📱 Multi-Platform Integration</h5>
+                    <p>Support for Instagram, LinkedIn, Facebook, and other social media platforms</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="trait-card">
+                    <h5>😊 Emotion Detection</h5>
+                    <p>Advanced emotion analysis alongside personality traits</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="trait-card">
+                    <h5>📈 Longitudinal Analysis</h5>
+                    <p>Track personality changes over time with historical data</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="trait-card">
+                    <h5>🌍 Multilingual Support</h5>
+                    <p>Support for multiple languages and cultural adaptations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Team -->
+<div class="row">
+    <div class="col-12 text-center">
+        <h3 class="mb-4">👥 Development Team</h3>
+        <p>This project was developed as a demonstration of AI and machine learning capabilities in personality analysis.</p>
+        <div class="mt-4">
+            <a href="{% url 'home' %}" class="btn btn-primary btn-lg">
+                🏠 Try the Personality Predictor
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

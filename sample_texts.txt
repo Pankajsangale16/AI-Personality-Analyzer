@@ -1,0 +1,41 @@
+🧠 SAMPLE TEXTS FOR PERSONALITY TESTING
+============================================
+
+1. CREATIVE & OPEN PERSONALITY:
+"I love exploring new ideas and trying different things every day. Art and music inspire me deeply. I enjoy philosophical discussions and thinking about complex problems. Innovation excites me and I'm always seeking new experiences and learning about different cultures."
+
+2. ORGANIZED & CONSCIENTIOUS PERSONALITY:
+"I always plan my schedule carefully and stick to my goals no matter what. Organization is key to success. I'm very detail-oriented and make sure everything is perfect before completing a task. Discipline and hard work have always been my values."
+
+3. SOCIAL & EXTRAVERTED PERSONALITY:
+"I enjoy being around people and going to social events every weekend. Parties energize me and I love meeting new people. Social interactions are my favorite part of life. I'm talkative and expressive. Being the center of attention doesn't bother me at all."
+
+4. COOPERATIVE & AGREEABLE PERSONALITY:
+"I always try to help others and maintain harmony in all my relationships. Cooperation is important and I'm very empathetic. I avoid conflicts and always look for win-win solutions. Everyone's happiness matters to me."
+
+5. CALM & EMOTIONALLY STABLE PERSONALITY:
+"I'm very easy-going and don't let things bother me too much. I stay calm under pressure and handle stress well. I'm emotionally stable and rarely get anxious. I'm optimistic and resilient."
+
+6. BALANCED PERSONALITY:
+"I enjoy both social time and quiet time for reflection. I'm organized but also flexible when needed. I like new experiences but appreciate routine too. I work well with others but also value my independence."
+
+7. ANALYTICAL & RESERVED PERSONALITY:
+"I work best alone and need quiet time to recharge my energy. Large groups drain me and I prefer deep conversations with close friends. I'm critical and analytical, focusing on logic over emotions in decision making."
+
+8. ADVENTUROUS & SPONTANEOUS PERSONALITY:
+"I'm very spontaneous and love surprises and new adventures. Flexibility is my strength and I adapt quickly to changing circumstances. I prefer to go with the flow rather than strict planning."
+
+9. COMPETITIVE & DRIVEN PERSONALITY:
+"I'm very competitive and always strive to be the best at everything. I'm not afraid of confrontation and I'm critical. I prioritize my goals over being nice to others when necessary. Success is my main motivation."
+
+10. KIND & EMPATHETIC PERSONALITY:
+"I'm very trusting and I give people the benefit of the doubt. I believe in the goodness of others. Kindness is my guiding principle and I'm always willing to help those in need."
+
+HOW TO USE:
+1. Copy any text above
+2. Go to http://127.0.0.1:8000
+3. Paste the text in the input field
+4. Click "Predict My Personality"
+5. View your detailed personality analysis!
+
+TIP: Longer texts (100+ words) provide more accurate results!
