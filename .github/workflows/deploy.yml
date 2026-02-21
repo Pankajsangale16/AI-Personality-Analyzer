@@ -37,9 +37,9 @@ jobs:
 
     - name: Run tests
       env:
-        DATABASE_URL: postgres://postgres:postgres@localhost:5432/test_db
+        DATABASE_URL: 'sqlite:///:memory:'
         SECRET_KEY: test-secret-key
-        DEBUG: False
+        DEBUG: 'False'
       run: |
         python manage.py test
 
